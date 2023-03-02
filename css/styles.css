@@ -1,3 +1,24 @@
+h1 {
+  color: rgb(18, 26, 45);
+}
+
+i,
+h5 {
+  color: rgb(9, 27, 47);
+}
+
+input {
+  color: rgb(151, 155, 158);
+}
+
+label {
+  color: white;
+}
+
 .hidden {
   display: none;
+}
+
+.mobile-navbar {
+  color: rgb(247, 247, 255);
 }
