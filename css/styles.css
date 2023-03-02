@@ -9,8 +9,14 @@ header {
   background-color: rgb(246, 247, 255);
 }
 
+h3,
+button {
+  font-family: "Permanent Marker", cursive;
+}
+
 i,
 h5 {
+  font-family: Roboto, sans-serif;
   color: rgb(9, 27, 47);
 }
 
