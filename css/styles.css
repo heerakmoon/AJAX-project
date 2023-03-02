@@ -22,6 +22,9 @@ h5 {
 
 input {
   color: rgb(151, 155, 158);
+  padding: 6px 3px;
+  border: 1px solid rgb(221, 224, 251);
+  border-radius: 3px;
 }
 
 label {
