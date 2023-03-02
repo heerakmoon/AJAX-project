@@ -28,6 +28,7 @@ button {
   border: 6px solid rgb(123, 152, 239);
   border-radius: 30px;
   padding: 5px 30px;
+  margin: 20px 0;
 }
 
 i,
@@ -55,12 +56,8 @@ label {
   color: rgb(247, 247, 255);
 }
 
-.flex-end {
-  align-items: flex-end;
-}
-
-.space-between {
-  justify-content: space-between;
+.vertical-center {
+  align-items: center;
 }
 
 .center {
@@ -89,8 +86,12 @@ label {
 }
 
 .mobile-nav-padding {
-  padding: 12px 0 7px;
+  padding: 15px 0 7px;
   background-color: rgb(247, 247, 255);
+}
+
+.search-bar-margin {
+  margin: 45px 0;
 }
 
 .bot-nav {
