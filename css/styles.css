@@ -17,14 +17,14 @@ button {
 i,
 h5 {
   font-family: Roboto, sans-serif;
-  color: rgb(9, 27, 47);
+  color: rgb(11, 32, 56);
 }
 
 input {
   color: rgb(151, 155, 158);
   padding: 6px 3px;
   border: 1px solid rgb(221, 224, 251);
-  border-radius: 3px;
+  border-radius: 3px 0 0 3px;
 }
 
 label {
@@ -37,4 +37,11 @@ label {
 
 .space-between {
   justify-content: space-between;
+}
+
+.magnifying-glass {
+  background-color: rgb(248, 247, 253);
+  border: 1px solid rgb(221, 224, 251);
+  padding: 5px;
+  border-radius: 0 3px 3px 0;
 }
