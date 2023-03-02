@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="bg-img">
   <header>
     <div class="row">
       <h1>AQ</h1>
@@ -33,21 +33,23 @@
   <main>
     <div class="container">
       <div data-view="home">
-        <div class="hidden">
-          <h3>Yesterday's Quote</h3>
-          <div id="yesterdays-quote"></div>
-        </div>
-        <div class="col-40">
-          <label for="search">Random Quote</label>
-          <div class="row nowrap">
-            <input name="search" type="search" placeholder="Name of anime, anime character">
-            <i class="fa-solid fa-magnifying-glass magnifying-glass"></i>
+        <div class="row center">
+          <div class="col-30 hidden">
+            <h3>Yesterday's Quote</h3>
+            <div id="yesterdays-quote"></div>
           </div>
-        </div>
-        <div>
-          <h3>Quote of the Day</h3>
-          <div id="new-daily-quote"></div>
-          <button>Guess The Anime</button>
+          <div class="col-40">
+            <label for="search">Random Quote</label>
+            <div class="row nowrap center">
+              <input name="search" type="search" placeholder="Name of anime, anime character">
+              <i class="fa-solid fa-magnifying-glass magnifying-glass"></i>
+            </div>
+          </div>
+          <div class="col-30">
+            <h3>Quote of the Day</h3>
+            <div id="new-daily-quote"></div>
+            <button>Guess The Anime</button>
+          </div>
         </div>
       </div>
     </div>
