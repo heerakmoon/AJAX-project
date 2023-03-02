@@ -36,6 +36,10 @@ h5 {
   color: rgb(11, 32, 56);
 }
 
+h5 {
+  margin: 0;
+}
+
 input {
   color: rgb(151, 155, 158);
   padding: 6px 3px;
@@ -49,6 +53,10 @@ label {
 
 .mobile-navbar {
   color: rgb(247, 247, 255);
+}
+
+.flex-end {
+  align-items: flex-end;
 }
 
 .space-between {
@@ -78,4 +86,19 @@ label {
 .daily-quote {
   background-color: rgb(43, 63, 88);
   border-radius: 12px;
+}
+
+.mobile-nav-padding {
+  padding: 12px 0 7px;
+  background-color: rgb(247, 247, 255);
+}
+
+.bot-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav-darker-blue {
+  background-color: rgb(227, 232, 252);
 }
