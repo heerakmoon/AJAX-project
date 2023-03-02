@@ -50,6 +50,7 @@ input {
 
 label {
   color: white;
+  font-family: Roboto, sans-serif;
 }
 
 .mobile-navbar {
@@ -102,4 +103,11 @@ label {
 
 .nav-darker-blue {
   background-color: rgb(227, 232, 252);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
