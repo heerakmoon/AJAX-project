@@ -1,6 +1,12 @@
 h1 {
   color: rgb(11, 31, 59);
   font-family: Rubik, sans-serif;
+  padding: 10px;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(246, 247, 255);
 }
 
 i,
