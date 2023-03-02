@@ -14,6 +14,14 @@ button {
   font-family: "Permanent Marker", cursive;
 }
 
+button {
+  font-weight: bold;
+  background-color: white;
+  border: 6px solid rgb(123, 152, 239);
+  border-radius: 30px;
+  padding: 5px 30px;
+}
+
 i,
 h5 {
   font-family: Roboto, sans-serif;
