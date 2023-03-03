@@ -2,6 +2,10 @@ input {
   width: 100%;
 }
 
+h5 {
+  min-width: 60px;
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -29,7 +33,19 @@ input {
   width: 20%;
 }
 
+.top-nav-width {
+  min-width: 305px;
+}
+
 @media screen and (min-width: 700px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .top-nav-width {
+    width: 40%;
+  }
+
   .col-40 {
     flex-basis: 40%;
   }
