@@ -21,7 +21,7 @@
   <header>
     <div class="row space-between">
       <h1>AQ</h1>
-      <div class="row top-nav-width text-center flex-end hidden">
+      <div class="row top-nav-width text-center flex-end">
         <h5 class="width-20 top-nav">Home</h5>
         <h5 class="width-20 top-nav">Guess</h5>
         <h5 class="width-20 top-nav">Animes</h5>
@@ -30,13 +30,15 @@
       </div>
     </div>
   </header>
-  <main class="bg-img">
+  <main>
     <div class="container overlay">
       <div data-view="home">
         <div class="row center">
-          <div class="col-30 hidden">
-            <h3>Yesterday's Quote</h3>
-            <div id="yesterdays-quote"></div>
+          <div class="col-30">
+            <div class="quote-of-day">
+              <h3>Yesterday's Quote</h3>
+              <div id="yesterdays-quote"></div>
+            </div>
           </div>
           <div class="col-40 search-bar-margin">
             <label for="search">Random Quote</label>
