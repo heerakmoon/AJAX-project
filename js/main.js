@@ -1,4 +1,4 @@
-// var $yesterdaysQuote = document.querySelector('#yesterdays-quote');
+var $yesterdaysQuote = document.querySelector('#yesterdays-quote');
 var $quoteOfDay = document.querySelector('#new-daily-quote');
 var newAjaxData;
 
@@ -14,7 +14,7 @@ function ajaxRequest() {
     if (xhr.status === 200) {
       newAjaxData = xhr.response;
       data.dailyQuotes.push(newAjaxData);
-      // $newQuote.textContent = '"' + xhr.response.quote + '"';
+      $newQuote.textContent = '"' + xhr.response.quote + '"';
       // console.log(newAjaxData);
     } else {
       $newQuote.textContent = 'Sorry, I can\'t seem to find today\'s quote. Go watch more anime! I\'ll have the quote ready for you in a bit';
@@ -25,24 +25,26 @@ function ajaxRequest() {
 }
 
 ajaxRequest();
+// console.log('data.dailyQuotes:', data.dailyQuotes);
+getYesterdaysQuote();
+
 // setInterval(ajaxRequest, 60000, getYesterdaysQuote, 60000);
 
-// function getYesterdaysQuote() {
-//   console.log('data.dailyQuotes:', data.dailyQuotes);
-//   var oldQuote = data.dailyQuotes[0];
-//   var $yesterdaysAnimeTitle = document.createElement('h4');
-//   $yesterdaysAnimeTitle.textContent = data.dailyQuotes[0].anime;
-//   $yesterdaysQuote.appendChild($yesterdaysAnimeTitle);
+function getYesterdaysQuote() {
+  var oldQuote = data.dailyQuotes[0];
+  var $yesterdaysAnimeTitle = document.createElement('h4');
+  $yesterdaysAnimeTitle.textContent = oldQuote.anime;
+  $yesterdaysQuote.appendChild($yesterdaysAnimeTitle);
 
-//   var $yesterdaysAnimeQuote = document.createElement('h4');
-//   $yesterdaysAnimeQuote.textContent = '"' + oldQuote.quote + '"';
-//   $yesterdaysQuote.appendChild($yesterdaysAnimeQuote);
+  var $yesterdaysAnimeQuote = document.createElement('h4');
+  $yesterdaysAnimeQuote.textContent = '"' + oldQuote.quote + '"';
+  $yesterdaysQuote.appendChild($yesterdaysAnimeQuote);
 
-//   var $yesterdaysAnimeCharacter = document.createElement('h4');
-//   $yesterdaysAnimeCharacter.textContent = oldQuote.character;
-//   $yesterdaysQuote.appendChild($yesterdaysAnimeCharacter);
+  var $yesterdaysAnimeCharacter = document.createElement('h4');
+  $yesterdaysAnimeCharacter.textContent = oldQuote.character;
+  $yesterdaysQuote.appendChild($yesterdaysAnimeCharacter);
 
-//   if (data.dailyQuotes.length === 2) {
-//     data.dailyQuotes.shift();
-//   }
-// }
+  if (data.dailyQuotes.length === 3) {
+    data.dailyQuotes.shift();
+  }
+}
