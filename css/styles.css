@@ -102,6 +102,10 @@ main {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .magnifying-glass {
   background-color: rgb(248, 247, 253);
   border: 1px solid rgb(221, 224, 251);
