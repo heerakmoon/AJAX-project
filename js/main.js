@@ -11,6 +11,7 @@ function ajaxRequest() {
     if (xhr.status === 200) {
       newAjaxData = xhr.response;
       data.dailyQuotes.unshift(newAjaxData);
+      getYesterdaysQuote();
     } else {
       $newQuote.textContent = 'Sorry, I can\'t seem to find today\'s quote. Go watch more anime! I\'ll have the quote ready for you in a bit';
     }
@@ -20,9 +21,14 @@ function ajaxRequest() {
 }
 
 ajaxRequest();
-getYesterdaysQuote();
 
-// setInterval(ajaxRequest, 10000, getYesterdaysQuote, 11000);
+setInterval(ajaxRequest, 864000);
+
+var $yesterdaysAnimeQuote = document.createElement('h4');
+$yesterdaysQuote.appendChild($yesterdaysAnimeQuote);
+
+var $yesterdaysAnimeCharacter = document.createElement('h4');
+$yesterdaysQuote.appendChild($yesterdaysAnimeCharacter);
 
 function getYesterdaysQuote() {
   var quoteOfDay = data.dailyQuotes[0];
@@ -34,14 +40,10 @@ function getYesterdaysQuote() {
   if (data.dailyQuotes[1]) {
     $yesterdaysAnimeTitle.textContent = oldQuote.anime;
 
-    var $yesterdaysAnimeQuote = document.createElement('h4');
     $yesterdaysAnimeQuote.textContent = '"' + oldQuote.quote + '"';
-    $yesterdaysQuote.appendChild($yesterdaysAnimeQuote);
 
-    var $yesterdaysAnimeCharacter = document.createElement('h4');
     $yesterdaysAnimeCharacter.className = 'text-right';
     $yesterdaysAnimeCharacter.textContent = '- ' + oldQuote.character;
-    $yesterdaysQuote.appendChild($yesterdaysAnimeCharacter);
     data.dailyQuotes.pop();
   }
 }
