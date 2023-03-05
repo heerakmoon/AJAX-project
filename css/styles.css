@@ -154,8 +154,19 @@ main {
   height: 100%;
 }
 
+@media screen and (max-width: 765px) {
+  #top-nav-bar,
+  #yesterdays-container {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 765px) {
   .red-box {
     margin-top: 25px;
+  }
+
+  #bot-nav-bar {
+    display: none;
   }
 }
