@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJAX Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -11,8 +19,74 @@
 </head>
 <body>
   <header>
+    <div class="row space-between">
+      <h1>AQ</h1>
+      <div id="top-nav-bar" class="row top-nav-width text-center flex-end">
+        <h5 class="width-20 top-nav nav-darker-blue">Home</h5>
+        <h5 class="width-20 top-nav">Guess</h5>
+        <h5 class="width-20 top-nav">Animes</h5>
+        <h5 class="width-20 top-nav">Quotes</h5>
+        <h5 class="width-20 top-nav">Favorites</h5>
+      </div>
+    </div>
   </header>
-  <main>
+  <main class="overlay">
+    <div class="container">
+      <div data-view="home">
+        <div class="row center">
+          <div id="yesterdays-container" class="col-30">
+            <div class="red-box">
+              <h3>Yesterday's Quote</h3>
+              <div id="yesterdays-quote" class="navy-box">
+                <h4 id="yesterdays-title">There are no quotes from yesterday :(</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-40 search-bar-margin">
+            <label for="search">Random Quote</label>
+            <div class="row nowrap center">
+              <input name="search" type="search" placeholder="Name of anime, anime character">
+              <i class="fa-solid fa-magnifying-glass magnifying-glass"></i>
+            </div>
+          </div>
+          <div class="col-30">
+            <div class="red-box">
+              <h3>Quote of the Day</h3>
+              <div class="navy-box">
+                <h4 id="new-quote">Sorry, I can't seem to find today's quote. Go watch more anime! I'll have the quote ready for you in a bit :)</h4>
+              </div>
+            </div>
+            <div class="text-center">
+              <button>Guess The Anime</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bot-nav-bar" class="bot-nav">
+      <div id="mobile-nav" class="row text-center flex-end">
+        <div class="mobile-nav-padding width-20 nav-darker-blue">
+          <i class="fa-solid fa-house fa-xl"></i>
+          <h5>Home</h5>
+        </div>
+        <div class="mobile-nav-padding width-20">
+          <i class="fas fa-question fa-xl"></i>
+          <h5>Guess</h5>
+        </div>
+        <div class="mobile-nav-padding width-20">
+          <i class="fa-solid fa-bars fa-xl"></i>
+          <h5>Animes</h5>
+        </div>
+        <div class="mobile-nav-padding width-20">
+          <i class="fa-solid fa-quote-left fa-xl"></i>
+          <h5>Quotes</h5>
+        </div>
+        <div class="mobile-nav-padding width-20">
+          <i class="fa-regular fa-heart fa-xl"></i>
+          <h5>Favorites</h5>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>

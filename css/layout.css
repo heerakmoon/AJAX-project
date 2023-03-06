@@ -1,0 +1,57 @@
+input {
+  width: 100%;
+}
+
+h5 {
+  min-width: 60px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.col-30,
+.col-40 {
+  flex-basis: 80%;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.top-nav-width {
+  min-width: 305px;
+}
+
+@media screen and (min-width: 765px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .top-nav-width {
+    width: 40%;
+  }
+
+  .col-40 {
+    flex-basis: 40%;
+  }
+
+  .col-30 {
+    flex-basis: 30%;
+    padding: 0 30px;
+  }
+}
