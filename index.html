@@ -34,7 +34,7 @@
     <div class="container">
       <div data-view="home">
         <div class="row center">
-          <div id="yesterdays-container" class="col-30">
+          <div id="yesterdays-container" class="col-30 hidden">
             <div class="red-box">
               <h3>Yesterday's Quote</h3>
               <div id="yesterdays-quote" class="navy-box">
@@ -42,32 +42,32 @@
               </div>
             </div>
           </div>
-          <div class="col-40 search-bar-margin">
+          <div class="col-40 search-bar-margin hidden">
             <label for="search">Random Quote</label>
             <div class="row nowrap center">
               <input name="search" type="search" placeholder="Name of anime, anime character">
               <i class="fa-solid fa-magnifying-glass magnifying-glass"></i>
             </div>
           </div>
-          <div data-view="guess" class="col-30">
+          <div data-view="guess" class="col-30 guess-top-margin">
             <div class="red-box">
               <h3>Quote of the Day</h3>
               <div class="navy-box">
                 <h4 id="new-quote">Sorry, I can't seem to find today's quote. Go watch more anime! I'll have the quote ready for you in a bit :)</h4>
               </div>
             </div>
-            <div class="text-center">
+            <div class="text-center hidden">
               <button>Guess The Anime</button>
             </div>
             <div id="answers" class="col-50">
-              <div>
-                <h4>Answer 1</h4>
+              <div class="ans-1">
+                <h4 class="ans-text">Answer 1</h4>
               </div>
-              <div>
-                <h4>Answer 2</h4>
+              <div class="ans-2">
+                <h4 class="ans-text">Answer 2</h4>
               </div>
-              <div>
-                <h4>Answer 3</h4>
+              <div class="ans-3">
+                <h4 class="ans-text">Answer 3</h4>
               </div>
               <div>
                 <p>Better luck next time</p>
