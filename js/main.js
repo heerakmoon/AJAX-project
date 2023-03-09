@@ -22,7 +22,7 @@ function ajaxRequest() {
 
 ajaxRequest();
 
-setInterval(ajaxRequest, 864000);
+setInterval(ajaxRequest, 86400000);
 
 var $yesterdaysAnimeQuote = document.createElement('h4');
 $yesterdaysQuote.appendChild($yesterdaysAnimeQuote);
