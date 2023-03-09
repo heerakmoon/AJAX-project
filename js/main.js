@@ -56,6 +56,8 @@ var $yesterdaysContainer = document.querySelector('#yesterdays-container');
 var $searchBar = document.querySelector('#search-bar');
 var $home = document.querySelector('#home');
 var $mobileHome = document.querySelector('#mobile-home');
+var $dataViewGuess = document.querySelector('[data-view="guess"]');
+var $answers = document.querySelector('#answers');
 
 $body.addEventListener('click', function (event) {
   if (event.target.matches('#guess') || event.target.matches('#guess-button') || event.target.matches('.fa-question') || event.target.matches('#bot-guess') || event.target.matches('mobile-guess')) {
@@ -66,5 +68,7 @@ $body.addEventListener('click', function (event) {
     $guess.className = 'width-20 top-nav nav-darker-blue';
     $mobileHome.className = 'mobile-nav-padding width-20';
     $mobileGuess.className = 'mobile-nav-padding width-20 nav-darker-blue';
+    $dataViewGuess.className = 'guess-col guess-top-margin row space-between';
+    $answers.className = 'col-45 margin-left';
   }
 });
