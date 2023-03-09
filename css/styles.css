@@ -221,6 +221,20 @@ main {
   font-family: "Permanent Marker", cursive;
 }
 
+.correct {
+  background-color: rgb(50, 254, 71);
+  color: white;
+}
+
+.incorrect {
+  background-color: rgb(254, 0, 6);
+  color: white;
+}
+
+.neutral {
+  background-color: rgb(13, 27, 62);
+}
+
 @media screen and (max-width: 765px) {
   #top-nav-bar,
   #yesterdays-container {
