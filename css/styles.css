@@ -247,6 +247,10 @@ main {
     margin-top: 25px;
   }
 
+  .navy-box {
+    height: 87%;
+  }
+
   .overlay {
     height: calc(100% - 57px);
   }

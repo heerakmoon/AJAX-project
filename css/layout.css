@@ -25,8 +25,13 @@ h5 {
 }
 
 .col-30,
-.col-40 {
+.col-40,
+.guess-col {
   flex-basis: 80%;
+}
+
+.col-45 {
+  flex-basis: 100%;
 }
 
 .width-20 {
@@ -55,7 +60,11 @@ h5 {
     padding: 0 30px;
   }
 
-  .col-50 {
-    flex-basis: 50%;
+  .col-45 {
+    flex-basis: 45%;
+  }
+
+  .guess-col {
+    width: 100%;
   }
 }
