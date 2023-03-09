@@ -22,11 +22,11 @@
     <div class="row space-between">
       <h1>AQ</h1>
       <div id="top-nav-bar" class="row top-nav-width text-center flex-end">
-        <h5 class="width-20 top-nav nav-darker-blue">Home</h5>
-        <h5 class="width-20 top-nav">Guess</h5>
-        <h5 class="width-20 top-nav">Animes</h5>
-        <h5 class="width-20 top-nav">Quotes</h5>
-        <h5 class="width-20 top-nav">Favorites</h5>
+        <h5 id="home" class="width-20 top-nav nav-darker-blue">Home</h5>
+        <h5 id="guess" class="width-20 top-nav">Guess</h5>
+        <h5 id="animes" class="width-20 top-nav">Animes</h5>
+        <h5 id="quotes" class="width-20 top-nav">Quotes</h5>
+        <h5 id="favorites" class="width-20 top-nav">Favorites</h5>
       </div>
     </div>
   </header>
@@ -34,7 +34,7 @@
     <div class="container">
       <div data-view="home">
         <div class="row center">
-          <div id="yesterdays-container" class="col-30 hidden">
+          <div id="yesterdays-container" class="col-30">
             <div class="red-box">
               <h3>Yesterday's Quote</h3>
               <div id="yesterdays-quote" class="navy-box">
@@ -42,7 +42,7 @@
               </div>
             </div>
           </div>
-          <div class="col-40 search-bar-margin hidden">
+          <div id="search-bar" class="col-40 search-bar-margin">
             <label for="search">Random Quote</label>
             <div class="row nowrap center">
               <input name="search" type="search" placeholder="Name of anime, anime character">
@@ -50,7 +50,7 @@
             </div>
           </div>
           <!-- col-30 replaced with guess-col guess-top-margin row-->
-          <div data-view="guess" class="guess-col guess-top-margin row space-between">
+          <div data-view="guess" class="col-30">
             <!--take out col-45 when in home view-->
             <div class="red-box col-45">
               <h3>Quote of the Day</h3>
@@ -58,10 +58,10 @@
                 <h4 id="new-quote">Sorry, I can't seem to find today's quote. Go watch more anime! I'll have the quote ready for you in a bit :)</h4>
               </div>
             </div>
-            <div class="text-center hidden">
-              <button>Guess The Anime</button>
+            <div class="text-center">
+              <button id="guess-button" type="button">Guess The Anime</button>
             </div>
-            <div id="answers" class="col-45 margin-left">
+            <div id="answers" class="col-45 margin-left hidden">
               <div class="ans-1">
                 <h4 class="ans-text">Answer 1</h4>
               </div>
@@ -71,15 +71,15 @@
               <div class="ans-3">
                 <h4 class="ans-text">Answer 3</h4>
               </div>
-              <div class="ans-msg">
+              <div class="ans-msg hidden">
                 <p>Better luck next time</p>
                 <p>¯\ (ツ) /¯</p>
               </div>
-              <div class="ans-msg">
+              <div class="ans-msg hidden">
                 <p>すごいですね</p>
                 <p>Sugoidesu ne &#128064;</p>
               </div>
-              <div class="ans-msg">
+              <div class="ans-msg hidden">
                 <div class="text-left">
                   <label for="bonus" class="bonus">Bonus:</label>
                 </div>
@@ -94,23 +94,23 @@
     </div>
     <div id="bot-nav-bar" class="bot-nav">
       <div id="mobile-nav" class="row text-center flex-end">
-        <div class="mobile-nav-padding width-20 nav-darker-blue">
+        <div id="mobile-home" class="mobile-nav-padding width-20 nav-darker-blue">
           <i class="fa-solid fa-house fa-xl"></i>
           <h5>Home</h5>
         </div>
-        <div class="mobile-nav-padding width-20">
+        <div id="mobile-guess" class="mobile-nav-padding width-20">
           <i class="fas fa-question fa-xl"></i>
-          <h5>Guess</h5>
+          <h5 id="bot-guess">Guess</h5>
         </div>
-        <div class="mobile-nav-padding width-20">
+        <div id="mobile-animes" class="mobile-nav-padding width-20">
           <i class="fa-solid fa-bars fa-xl"></i>
           <h5>Animes</h5>
         </div>
-        <div class="mobile-nav-padding width-20">
+        <div id="mobile-quotes" class="mobile-nav-padding width-20">
           <i class="fa-solid fa-quote-left fa-xl"></i>
           <h5>Quotes</h5>
         </div>
-        <div class="mobile-nav-padding width-20">
+        <div id="mobile-favorites" class="mobile-nav-padding width-20">
           <i class="fa-regular fa-heart fa-xl"></i>
           <h5>Favorites</h5>
         </div>

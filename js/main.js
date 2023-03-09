@@ -1,3 +1,4 @@
+var $body = document.querySelector('body');
 var $yesterdaysQuote = document.querySelector('#yesterdays-quote');
 var $newQuote = document.querySelector('#new-quote');
 var $yesterdaysAnimeTitle = document.querySelector('#yesterdays-title');
@@ -47,3 +48,18 @@ function getYesterdaysQuote() {
     data.dailyQuotes.pop();
   }
 }
+
+// var $guess = document.querySelector('#guess');
+var $mobileGuess = document.querySelector('#mobile-guess');
+var $guessButton = document.querySelector('#guess-button');
+var $yesterdaysContainer = document.querySelector('#yesterdays-container');
+var $searchBar = document.querySelector('#search-bar');
+
+$body.addEventListener('click', function (event) {
+  // console.log(event.target);
+  if (event.target.matches('#guess') || event.target.matches('#guess-button') || event.target.matches('.fa-question') || event.target.matches('#bot-guess') || event.target === $mobileGuess) {
+    $yesterdaysContainer.className = 'col-30 hidden';
+    $searchBar.className = 'col-40 search-bar-margin hidden';
+    $guessButton.className = 'text-center hidden';
+  }
+});
