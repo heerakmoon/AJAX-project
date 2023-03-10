@@ -31,9 +31,10 @@ $yesterdaysQuote.appendChild($yesterdaysAnimeQuote);
 var $yesterdaysAnimeCharacter = document.createElement('h4');
 $yesterdaysQuote.appendChild($yesterdaysAnimeCharacter);
 
+var quoteOfDay = data.dailyQuotes[0];
+var oldQuote = data.dailyQuotes[1];
+
 function getYesterdaysQuote() {
-  var quoteOfDay = data.dailyQuotes[0];
-  var oldQuote = data.dailyQuotes[1];
 
   if (data.dailyQuotes[0]) {
     $newQuote.textContent = '"' + quoteOfDay.quote + '"';
@@ -72,3 +73,16 @@ $body.addEventListener('click', function (event) {
     $answers.className = 'col-45 margin-left';
   }
 });
+
+var $answer1 = document.querySelector('#answer-1');
+var $answer2 = document.querySelector('#answer-2');
+var $answer3 = document.querySelector('#answer-3');
+
+function createAnswers() {
+  var ansArr = [$answer1, $answer2, $answer3];
+  var oneTwoThree = Math.floor(Math.random() * ansArr.length);
+  ansArr[oneTwoThree].textContent = quoteOfDay.anime;
+  ansArr.splice(oneTwoThree, 1);
+}
+
+createAnswers();
