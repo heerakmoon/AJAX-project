@@ -85,6 +85,8 @@ var $home = document.querySelector('#home');
 var $mobileHome = document.querySelector('#mobile-home');
 var $dataViewGuess = document.querySelector('[data-view="guess"]');
 var $answers = document.querySelector('#answers');
+var $correct = document.querySelector('#correct');
+// var $incorrect = document.querySelector('#incorrect');
 
 $body.addEventListener('click', function (event) {
   if (event.target.matches('#guess') || event.target.matches('#guess-button') || event.target.matches('.fa-question') || event.target.matches('#bot-guess') || event.target.matches('mobile-guess')) {
@@ -97,5 +99,19 @@ $body.addEventListener('click', function (event) {
     $mobileGuess.className = 'mobile-nav-padding width-20 nav-darker-blue';
     $dataViewGuess.className = 'guess-col guess-top-margin row space-between';
     $answers.className = 'col-45 margin-left';
+  }
+
+  if ((event.target.matches('#answer-1') || event.target.matches('#answer-2') || event.target.matches('#answer-3')) && event.target.textContent !== quoteOfDay.anime) {
+    event.target.className = 'ans-text incorrect';
+    var correctAns;
+    for (var i = 0; i < ansArr.length; i++) {
+      if (ansArr[i].textContent === quoteOfDay.anime) {
+        correctAns = ansArr[i];
+      }
+    }
+    correctAns.className = 'ans-text correct';
+  } else if ((event.target.matches('#answer-1') || event.target.matches('#answer-2') || event.target.matches('#answer-3')) && event.target.textContent === quoteOfDay.anime) {
+    event.target.className = 'ans-text correct';
+    $correct.className = 'ans-msg';
   }
 });

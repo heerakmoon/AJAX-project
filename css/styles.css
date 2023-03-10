@@ -173,27 +173,6 @@ main {
   text-align: center;
 }
 
-.ans-1 {
-  background-color: rgb(255, 188, 112);
-  border-radius: 50px;
-  padding: 6px 10px;
-  margin-top: 15px;
-}
-
-.ans-2 {
-  background-color: rgb(214, 254, 124);
-  border-radius: 50px;
-  padding: 6px 10px;
-  margin-top: 15px;
-}
-
-.ans-3 {
-  background-color: rgb(122, 199, 246);
-  border-radius: 50px;
-  padding: 6px 10px;
-  margin-top: 15px;
-}
-
 .ans-msg {
   background-color: rgb(15, 29, 64);
   color: white;
@@ -221,6 +200,13 @@ main {
   font-family: "Permanent Marker", cursive;
 }
 
+.neutral {
+  background-color: rgb(13, 27, 62);
+  border-radius: 50px;
+  padding: 6px 10px;
+  margin-top: 15px;
+}
+
 .correct {
   background-color: rgb(50, 254, 71);
   color: white;
@@ -229,10 +215,6 @@ main {
 .incorrect {
   background-color: rgb(254, 0, 6);
   color: white;
-}
-
-.neutral {
-  background-color: rgb(13, 27, 62);
 }
 
 button,
