@@ -235,6 +235,13 @@ main {
   background-color: rgb(13, 27, 62);
 }
 
+button,
+.ans-text,
+#top-nav-bar,
+#bot-nav-bar:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 765px) {
   #top-nav-bar,
   #yesterdays-container {
