@@ -217,6 +217,10 @@ main {
   color: white;
 }
 
+.disable {
+  pointer-events: none;
+}
+
 button,
 .ans-text,
 #top-nav-bar,

@@ -87,6 +87,7 @@ var $dataViewGuess = document.querySelector('[data-view="guess"]');
 var $answers = document.querySelector('#answers');
 var $correct = document.querySelector('#correct');
 var $incorrect = document.querySelector('#incorrect');
+var $ansTextList = document.querySelectorAll('.neutral');
 
 $body.addEventListener('click', function (event) {
   if (event.target.matches('#home') || event.target.matches('#bot-home') || event.target.matches('.fa-house') || event.target.matches('#mobile-home')) {
@@ -115,8 +116,22 @@ $body.addEventListener('click', function (event) {
   if ((event.target.matches('#answer-1') || event.target.matches('#answer-2') || event.target.matches('#answer-3')) && event.target.textContent !== quoteOfDay.anime) {
     event.target.className = 'ans-text incorrect';
     $incorrect.className = 'ans-msg';
+    var $h4Ans = document.querySelectorAll('.ans-text');
+    for (var m = 0; m < $h4Ans.length; m++) {
+      if ($h4Ans[m].textContent === quoteOfDay.anime) {
+        $h4Ans[m].classList.add('correct');
+      }
+
+    }
+
+    for (var i = 0; i < $ansTextList.length; i++) {
+      $ansTextList[i].classList.add('disable');
+    }
   } else if ((event.target.matches('#answer-1') || event.target.matches('#answer-2') || event.target.matches('#answer-3')) && event.target.textContent === quoteOfDay.anime) {
     event.target.className = 'ans-text correct';
     $correct.className = 'ans-msg';
+    for (var k = 0; k < $ansTextList.length; k++) {
+      $ansTextList[k].classList.add('disable');
+    }
   }
 });
