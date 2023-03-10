@@ -2,8 +2,11 @@ var $body = document.querySelector('body');
 var $yesterdaysQuote = document.querySelector('#yesterdays-quote');
 var $newQuote = document.querySelector('#new-quote');
 var $yesterdaysAnimeTitle = document.querySelector('#yesterdays-title');
+var $answer1 = document.querySelector('#answer-1');
+var $answer2 = document.querySelector('#answer-2');
+var $answer3 = document.querySelector('#answer-3');
+var ansArr = [$answer1, $answer2, $answer3];
 var newAjaxData;
-// var animeList;
 
 function animeListRequest() {
   var xhr = new XMLHttpRequest();
@@ -11,7 +14,15 @@ function animeListRequest() {
   xhr.responseType = 'json';
   xhr.addEventListener('load', function () {
     if (xhr.status === 200) {
-      // animeList = xhr.response;
+      var animeList = xhr.response;
+      var oneTwoThree = Math.floor(Math.random() * ansArr.length);
+      ansArr[oneTwoThree].textContent = quoteOfDay.anime;
+      ansArr.splice(oneTwoThree, 1);
+
+      for (var m = 0; m < ansArr.length; m++) {
+        var titleNum = Math.floor(Math.random() * animeList.length);
+        ansArr[m].textContent = animeList[titleNum];
+      }
     }
   });
   xhr.send();
@@ -88,16 +99,3 @@ $body.addEventListener('click', function (event) {
     $answers.className = 'col-45 margin-left';
   }
 });
-
-var $answer1 = document.querySelector('#answer-1');
-var $answer2 = document.querySelector('#answer-2');
-var $answer3 = document.querySelector('#answer-3');
-
-function createAnswers() {
-  var ansArr = [$answer1, $answer2, $answer3];
-  var oneTwoThree = Math.floor(Math.random() * ansArr.length);
-  ansArr[oneTwoThree].textContent = quoteOfDay.anime;
-  ansArr.splice(oneTwoThree, 1);
-}
-
-createAnswers();
