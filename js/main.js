@@ -3,6 +3,21 @@ var $yesterdaysQuote = document.querySelector('#yesterdays-quote');
 var $newQuote = document.querySelector('#new-quote');
 var $yesterdaysAnimeTitle = document.querySelector('#yesterdays-title');
 var newAjaxData;
+// var animeList;
+
+function animeListRequest() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://animechan.vercel.app/api/available/anime');
+  xhr.responseType = 'json';
+  xhr.addEventListener('load', function () {
+    if (xhr.status === 200) {
+      // animeList = xhr.response;
+    }
+  });
+  xhr.send();
+}
+
+animeListRequest();
 
 function ajaxRequest() {
   var xhr = new XMLHttpRequest();
